@@ -1,4 +1,4 @@
-/* Reset */
+Reset
 * {
     margin: 0;
     padding: 0;
@@ -15,7 +15,7 @@ body {
 }
 
 :root {
-    --background-color: #b5e6d0;
+    --background-color: #8df8b1;
     --text-color: #333;
     --primary-color: #4CAF50;
     --secondary-color: #666;
@@ -81,7 +81,7 @@ header {
 }
 
 .btn:hover {
-    background-color: #45a049;
+    background-color: #00ff80;
 }
 
 .section {
@@ -202,25 +202,25 @@ footer p {
 }
 
 .theme-toggle:hover {
-    background-color: #45a049;
+    background-color: ;
 }
 
 #resume {
     text-align: center;
     padding: 60px 20px;
-    background-color: #f9f9f9;
+    background-color: var(--background-color);
 }
 
 #resume .section-title {
     font-size: 2em;
     margin-bottom: 20px;
-    color: #333;
+    color: var(--primary-color);
 }
 
 .resume-text {
     font-size: 1.1em;
     margin-bottom: 30px;
-    color: #555;
+    color: #f8f5f5;
 }
 
 .resume-actions {
@@ -231,7 +231,7 @@ footer p {
 
 .resume-actions .btn {
     padding: 10px 20px;
-    background-color: #007bff; /* You can customize this */
+    background-color: #4CAF50; /* You can customize this */
     color: white;
     text-decoration: none;
     border-radius: 5px;
@@ -239,5 +239,6 @@ footer p {
 }
 
 .resume-actions .btn:hover {
-    background-color: #0056b3;
+    background-color: #91c29c;
 }
+
