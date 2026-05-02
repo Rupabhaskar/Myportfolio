@@ -2,6 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script>
+        (function () {
+            try {
+                var k = "theme";
+                var d = document.documentElement;
+                var s = localStorage.getItem(k);
+                if (s === "light" || s === "dark") {
+                    d.setAttribute("data-theme", s);
+                    return;
+                }
+                d.setAttribute("data-theme", "dark");
+            } catch (e) {}
+        })();
+    </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Rupa Bhaskar Pydi — Portfolio</title>
@@ -46,9 +60,15 @@
                 <li><a href="#about-me" data-nav="about-me"><span class="hash">#</span>about-me</a></li>
                 <li><a href="#contact-me" data-nav="contact-me"><span class="hash">#</span>contact-me</a></li>
             </ul>
-            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
-                <span></span><span></span><span></span>
-            </button>
+            <div class="top-nav__actions">
+                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+                    <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></i>
+                    <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></i>
+                </button>
+                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -60,7 +80,7 @@
                 <h1 class="hero-title">
                     Hi, I'm a <span class="accent">web developer</span> and <span class="accent">Java developer</span>
                 </h1>
-                <p class="hero-sub">I'm into DSA, frontend, backend, and building things that work well on the web.</p>
+                <p class="hero-sub">I build scalable, secure applications with advanced technologies — from DSA and algorithms to the frontend, plus backends I create and maintain: APIs, services, databases, and dependable server-side systems for the modern web.</p>
                 <ul class="hero-stats" aria-label="Highlights">
                     <li><span class="hero-stats__num">10+</span> <span class="hero-stats__lbl">projects shipped</span></li>
                     <li><span class="hero-stats__num">Full</span> <span class="hero-stats__lbl">stack focus</span></li>
@@ -295,18 +315,50 @@
                     <h2 class="section-heading"><span class="hash">#</span>about-me</h2>
                     <span class="section-line" aria-hidden="true"></span>
                 </div>
-                <p>I'm a creative developer with a passion for responsive, user-friendly websites. I enjoy turning ideas into solid front-end experiences and reliable back-end logic.</p>
-                <p>When I'm not coding, I'm usually sharpening problem-solving skills, exploring new tools, or shipping the next small improvement to something I already built.</p>
+                <p>I'm a developer who cares about responsive, accessible interfaces and backends that stay maintainable as they grow. I turn ideas into scalable, secure products — thoughtful front-end UX paired with APIs, data layers, and server-side logic I can own end to end.</p>
+                <p>When I'm not coding, I'm usually sharpening problem-solving and DSA, exploring new tools, or shipping the next small improvement to something I already built.</p>
+                <p>I'm especially interested in how to implement microservices well: clear domain boundaries, resilient communication between services, and choosing the right patterns and providers (containers, gateways, observability) so the architecture stays understandable and production-ready.</p>
                 <a href="RupaBhaskarExp.pdf" class="btn-outline btn-resume" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume <span aria-hidden="true">↓</span></a>
             </div>
             <div class="about-art" aria-hidden="true">
                 <div class="about-art-frame">
                     <div class="about-art-grid"></div>
-                    <div class="about-art-laptop">
-                        <div class="about-art-screen"></div>
-                        <div class="about-art-base"></div>
+                    <div class="about-art-vignette"></div>
+                    <div class="about-art-glow about-art-glow--a"></div>
+                    <div class="about-art-glow about-art-glow--b"></div>
+                    <span class="about-art-corner about-art-corner--tl"></span>
+                    <span class="about-art-corner about-art-corner--tr"></span>
+                    <span class="about-art-corner about-art-corner--bl"></span>
+                    <span class="about-art-corner about-art-corner--br"></span>
+                    <div class="about-art-scene">
+                        <div class="about-arch">
+                            <span class="about-arch__edge" aria-hidden="true"></span>
+                            <span class="about-arch__dot"></span>
+                        </div>
+                        <div class="about-monitor">
+                            <div class="about-monitor__body">
+                                <div class="about-monitor__chrome">
+                                    <span class="about-monitor__dot about-monitor__dot--r"></span>
+                                    <span class="about-monitor__dot about-monitor__dot--y"></span>
+                                    <span class="about-monitor__dot about-monitor__dot--g"></span>
+                                </div>
+                                <div class="about-monitor__viewport">
+                                    <div class="about-monitor__lines">
+                                        <span class="about-line"></span>
+                                        <span class="about-line"></span>
+                                        <span class="about-line"></span>
+                                        <span class="about-line"></span>
+                                        <span class="about-line"></span>
+                                        <span class="about-line"></span>
+                                    </div>
+                                    <span class="about-monitor__ring"></span>
+                                </div>
+                                <div class="about-monitor__shine"></div>
+                            </div>
+                            <div class="about-monitor__base"></div>
+                            <div class="about-monitor__ground"></div>
+                        </div>
                     </div>
-                    <div class="about-art-figure"></div>
                 </div>
             </div>
         </div>

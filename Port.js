@@ -95,4 +95,25 @@
             el.classList.add("is-visible");
         });
     }
+
+    (function themeToggle() {
+        var btn = document.querySelector("[data-theme-toggle]");
+        if (!btn) return;
+
+        function syncUi() {
+            var isLight = document.documentElement.getAttribute("data-theme") === "light";
+            btn.setAttribute("aria-label", isLight ? "Switch to dark theme" : "Switch to light theme");
+        }
+
+        btn.addEventListener("click", function () {
+            var next = document.documentElement.getAttribute("data-theme") === "light" ? "dark" : "light";
+            document.documentElement.setAttribute("data-theme", next);
+            try {
+                localStorage.setItem("theme", next);
+            } catch (e) {}
+            syncUi();
+        });
+
+        syncUi();
+    })();
 })();
