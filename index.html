@@ -4,124 +4,360 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>RupaBhaskar Pydi</title>
+    <title>Rupa Bhaskar Pydi — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
     <link rel="stylesheet" href="port.css">
-    <!-- <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet"> -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
 </head>
-<body >
-   <div class="theme-toggle">
-        <i id="theme-icon" class="fas fa-sun"></i>
+<body>
+    <a href="#main-content" class="skip-link">Skip to content</a>
+    <div class="scroll-progress" aria-hidden="true"><span class="scroll-progress__fill"></span></div>
+    <button type="button" class="back-to-top" aria-label="Back to top" hidden>
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <div class="page-decoration" aria-hidden="true">
+        <span class="mesh-gradient"></span>
+        <span class="noise-layer"></span>
+        <span class="glow-orb glow-orb--a"></span>
+        <span class="glow-orb glow-orb--b"></span>
+        <span class="glow-orb glow-orb--c"></span>
+        <span class="grid-lines"></span>
     </div>
-    <header>
-        <div class="container">
-            <div class="hero-content">
-                <h1 class="title">I'm <span>RUPA BHASKAR PYDI</span></h1>
-                <p class="subtitle">JAVA Developer | Web Developer</p>
-                <a href="#contact" class="btn">Hire Me</a>
+
+    <aside class="side-social" aria-label="Social links">
+        <a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+    </aside>
+
+    <nav class="top-nav" aria-label="Primary">
+        <div class="top-nav__inner">
+            <a href="#home" class="brand">
+                <span class="brand-mark" aria-hidden="true"></span>
+                <span class="brand-name">Rupa</span>
+            </a>
+            <ul class="nav-links" id="site-nav">
+                <li><a href="#home" data-nav="home"><span class="hash">#</span>home</a></li>
+                <li><a href="#projects" data-nav="projects"><span class="hash">#</span>projects</a></li>
+                <li><a href="#skills" data-nav="skills"><span class="hash">#</span>skills</a></li>
+                <li><a href="#about-me" data-nav="about-me"><span class="hash">#</span>about-me</a></li>
+                <li><a href="#contact-me" data-nav="contact-me"><span class="hash">#</span>contact-me</a></li>
+            </ul>
+            <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <header id="home" class="hero">
+        <div class="hero-inner container">
+            <div class="hero-copy">
+                <span class="hero-tag" aria-hidden="true">&lt;portfolio /&gt;</span>
+                <h1 class="hero-title">
+                    Hi, I'm a <span class="accent">web developer</span> and <span class="accent">Java developer</span>
+                </h1>
+                <p class="hero-sub">I'm into DSA, frontend, backend, and building things that work well on the web.</p>
+                <ul class="hero-stats" aria-label="Highlights">
+                    <li><span class="hero-stats__num">10+</span> <span class="hero-stats__lbl">projects shipped</span></li>
+                    <li><span class="hero-stats__num">Full</span> <span class="hero-stats__lbl">stack focus</span></li>
+                    <li><span class="hero-stats__num">Open</span> <span class="hero-stats__lbl">to collaboration</span></li>
+                </ul>
+                <a href="#projects" class="btn-outline btn-outline--primary">View work <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-deco" aria-hidden="true"></div>
+                <div class="hero-photo-wrap">
+                    <img src="rupa-hero.png" alt="Rupa Bhaskar Pydi" class="hero-photo" width="640" height="853" loading="eager" decoding="async" fetchpriority="high" sizes="(max-width: 900px) 85vw, min(380px, 28vw)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                    <div class="hero-photo-fallback" role="img" aria-label="Rupa Bhaskar Pydi">
+                        <span>RB</span>
+                    </div>
+                </div>
+                <div class="status-box">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    <p>Currently working on <strong>Software Engineer &amp; System Designer</strong></p>
+                </div>
             </div>
         </div>
     </header>
 
-    <section id="about" class="section">
+    <section class="quote-section container reveal-on-scroll">
+        <blockquote class="quote-card">
+            <span class="quote-mark quote-open" aria-hidden="true">“</span>
+            <p class="quote-text">An idea becomes powerful when it turns into something people can use with ease.</p>
+            <span class="quote-mark quote-close" aria-hidden="true">”</span>
+            <footer class="quote-attrib">— Rupabhaskar</footer>
+        </blockquote>
+    </section>
+
+    <section id="projects" class="section-block reveal-on-scroll">
         <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <p class="about-text">
-                I'm a creative web developer with a passion for building responsive and user-friendly websites. With experience in front-end and back-end development, I bring ideas to life on the web.
-            </p>
-            <div class="skills">
-                <div class="skill-item">JAVA</div>
-                <div class="skill-item">OOPs</div>
-                <div class="skill-item">DSA</div>
-                <div class="skill-item">HTML5</div>
-                <div class="skill-item">CSS3</div>
-                <div class="skill-item">JavaScript</div>
-                <div class="skill-item">Problem solving</div>
+            <div class="section-head">
+                <h2 class="section-heading"><span class="hash">#</span>projects</h2>
+                <span class="section-line" aria-hidden="true"></span>
+                <a href="#projects-more" class="section-link">View all ~~&gt;</a>
+            </div>
+            <div class="projects-row">
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img style="width: 100%; height: 50%; margin-top: 50px;" src="vyasa.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js next.js tailwindcss firebase Mysql</p>
+                    <h3 class="project-title">Vyasa CA Academy</h3>
+                    <p class="project-desc">Full-stack website development experience for Vyasa Academy with a modern UI focused on lead generation, showcasing programs, and highlighting productivity-driven results.</p>
+                    <a href="https://www.vyasastudies.in/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card project-card--compact">
+                    <div class="project-thumb project-thumb--sm">
+                        <img style="width: 100%; height: 50%; margin-top: 50px;" src="vaweIn.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
+                    <h3 class="project-title">VAWE Institute</h3>
+                    <p class="project-desc">Training institute website — courses, certifications, workshops, and placement-focused content for learners in Vijayawada.</p>
+                    <a href="https://www.vaweinstitute.com/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="vawetech.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
+                    <h3 class="project-title">VAWE Global Tech</h3>
+                    <p class="project-desc">Corporate site for VAWE Technologies — software development, digital solutions, services, and product showcases for clients in Vijayawada and beyond.</p>
+                    <a href="https://www.vawetechnologies.com/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="lms.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
+                    <h3 class="project-title">SkillWins LMS</h3>
+                    <p class="project-desc">Learning management platform for the VAWE ecosystem — courses, progress tracking, and learner dashboards.
+                    </br>Sample Login:</br> Username: test@gmail.com</br> Password: Test@9988
+                    </p>
+                    <a href="https://www.skillwins.in/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img style="background-color: aliceblue;" src="shopx.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js next.js tailwindcss firebase</p>
+                    <h3 class="project-title">E-Commerce Application</h3>
+                    <p class="project-desc">Full-stack e-commerce experience with modern UI and reliable checkout flows.</p>
+                    <a href="https://ecomarc.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="arura.png" alt="Aurelia Jewelry — storefront preview" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback');">
+                    </div>
+                    <p class="project-tech">React.js Next.js Tailwind CSS</p>
+                    <h3 class="project-title">Aurelia Jewelry</h3>
+                    <p class="project-desc">Jewelry e-commerce showcase — categories (necklaces, rings, bangles, earrings), pastel-forward UI, and shop flows built for a refined retail experience.</p>
+                    <a href="https://sample-jewelry.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img style="width: 100%; height: 100%; margin-top: 50px;" src="logo2.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">HTML CSS JS React.js next.js tailwindcss firebase</p>
+                    <h3 class="project-title">HalfSaree Photography</h3>
+                    <p class="project-desc">A commercial web application for showcasing photography work.</p>
+                    <a href="https://half-saree-photography.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card">
+                    <div class="project-thumb">
+                        <img src="logo1.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">HTML CSS JS Bootstrap</p>
+                    <h3 class="project-title">MedicoPlus</h3>
+                    <p class="project-desc">Healthcare-focused web app — alpha version in active development.</p>
+                    <a href="https://rsmedicoplus.netlify.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+            </div>
+
+            <div id="projects-more" class="projects-more">
+                <article class="project-card project-card--compact">
+                    <div class="project-thumb project-thumb--sm">
+                        <img src="bday.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
+                    <h3 class="project-title">SnapU Birthday Photography</h3>
+                    <p class="project-desc">Marketing site for SnapU Photography — birthday sessions, packages, and gallery with a bright, celebration-focused UI.</p>
+                    <a href="https://birthday-photography.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card project-card--compact">
+                    <div class="project-thumb project-thumb--sm">
+                        <img src="Market.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    </div>
+                    <p class="project-tech">HTML CSS JS</p>
+                    <h3 class="project-title">Fresh Market</h3>
+                    <p class="project-desc">Alpha version — marketplace concept.</p>
+                    <a href="https://nanimarket.netlify.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                </article>
+                <article class="project-card project-card--compact">
+                    <div class="project-thumb project-thumb--sm thumb-fallback" aria-hidden="true"></div>
+                    <p class="project-tech">Java Spring Full-stack</p>
+                    <h3 class="project-title">BookBuddies</h3>
+                    <p class="project-desc">Committed to build — coming soon.</p>
+                    <span class="btn-outline btn-live btn-live--disabled" aria-disabled="true">Soon</span>
+                </article>
             </div>
         </div>
     </section>
-      <section id="resume" class="section">
-    <div class="container">
-        <h2 class="section-title">My Resume</h2>
-        <p class="resume-text">Click below to view or download my resume.</p>
-        <div class="resume-actions">
-            <a href="resume.pdf" class="btn" target="_blank">View Resume</a>
-            <a href="resume.pdf" class="btn" download>Download Resume</a>
-        </div>
-    </div>
-</section>
 
-    <section id="projects" class="section">
+    <section id="skills" class="section-block reveal-on-scroll">
         <div class="container">
-            <h2 class="section-title">My Projects</h2>
-            <div class="projects-grid">
-                  <div class="project-card">
-                    <img src="shopx.png" width="100px" height="100px" alt="Project 1">
-                    <h3>E-Commerce Application</h3>
-                    <p> </p>
-                    <a href="https://ecomarc.vercel.app/" class="btn" target="_blank">View Project</a>
+            <div class="section-head section-head--nomenu">
+                <h2 class="section-heading"><span class="hash">#</span>skills</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <div class="skills-layout">
+                <h3 class="skills-group-title">Frontend</h3>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>html5</span>
                 </div>
-            <div class="projects-grid">
-                  <div class="project-card">
-                    <img src="logo2.png" width="100px" height="100px" alt="Project 1">
-                    <h3>HalfSaree Photography</h3>
-                    <p>A commercial Web Application </p>
-                    <a href="https://half-saree-photography.vercel.app/" class="btn" target="_blank">View Project</a>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>css3</span>
                 </div>
-                <div class="project-card">
-                    <img src="logo1.png" width="100px" height="100px" alt="Project 1">
-                    <h3>MedicoPlus</h3>
-                    <p>Alpha version...</p>
-                    <a href="https://rsmedicoplus.netlify.app/" class="btn" target="_blank">View Project</a>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>tailwindcss</span>
                 </div>
-                 <div class="project-card">
-                    <img src="Market.jpg" width="100px" height="100px" alt="Project 2">
-                    <h3>Fresh Market </h3>
-                    <p>Alpha Version</p>
-                    <a href="https://nanimarket.netlify.app/" class="btn" target="_blank">View Project</a>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>javascript</span>
                 </div>
-                <div class="project-card"><br><br><br>
-                    <h3>BookBuddies</h3>
-                    <p>Committed to build... <br> coming soon</p>
-                    <br>
-                    <a href="#" class="btn" target="_blank">View Project</a>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>react</span>
                 </div>
-                <div class="project-card">
-                    <h3>Project Four </h3>
-                    <p>Planning...........</p>
-                    <a href="#" class="btn" target="_blank">View Project</a>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>next.js</span>
                 </div>
-                <!-- Add more projects as needed -->
+
+                <h3 class="skills-group-title">Backend</h3>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>node.js</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>nestjs</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>java</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>spring boot</span>
+                </div>
+
+                <h3 class="skills-group-title">SQL · MongoDB · Firebase</h3>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>mysql</span>
+                    <span class="skill-caption">relational sql</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>mongodb</span>
+                    <span class="skill-caption">nosql database</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>firebase</span>
+                    <span class="skill-caption">authentication &amp; database</span>
+                </div>
+
+                <h3 class="skills-group-title">Tools &amp; foundations</h3>
+                <div class="skill-box">
+                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>git</span>
+                </div>
+                <div class="skill-box">
+                    <img class="skill-icon skill-icon--on-light" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/leetcode.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
+                    <span>dsa / oops</span>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container">
-            <h2 class="section-title">Contact Me</h2>
-            <p class="contact-text">I’m open to discussing any ideas or opportunities where we can work together. Reach out anytime.</p>
-            <div class="contact-info">
-                <p><strong>Email:</strong> Rupapydi970@gmail.com</p>
-                <p><strong>Phone:</strong> +919702589296</p>
-                <a href="https://wa.me/9703589296" style="text-decoration: none;"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a>
-
+    <section id="about-me" class="section-block about-section reveal-on-scroll">
+        <div class="container about-grid">
+            <div class="about-copy">
+                <div class="section-head section-head--nomenu">
+                    <h2 class="section-heading"><span class="hash">#</span>about-me</h2>
+                    <span class="section-line" aria-hidden="true"></span>
+                </div>
+                <p>I'm a creative developer with a passion for responsive, user-friendly websites. I enjoy turning ideas into solid front-end experiences and reliable back-end logic.</p>
+                <p>When I'm not coding, I'm usually sharpening problem-solving skills, exploring new tools, or shipping the next small improvement to something I already built.</p>
+                <a href="RupaBhaskarExp.pdf" class="btn-outline btn-resume" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume <span aria-hidden="true">↓</span></a>
+            </div>
+            <div class="about-art" aria-hidden="true">
+                <div class="about-art-frame">
+                    <div class="about-art-grid"></div>
+                    <div class="about-art-laptop">
+                        <div class="about-art-screen"></div>
+                        <div class="about-art-base"></div>
+                    </div>
+                    <div class="about-art-figure"></div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; RUPA BHASKAR PYDI. Designed with ❤️ and code.</p>
-            <ul class="social-links">
-                <li><a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank">LinkedIn</a></li>
-                <li><a href="https://github.com/Rupabhaskar" target="_blank">GitHub</a></li>
-                <li><a href="#" target="_blank">Twitter</a></li>
-            </ul>
+    <section id="contact-me" class="section-block reveal-on-scroll">
+        <div class="container contact-grid">
+            <div>
+                <div class="section-head section-head--nomenu">
+                    <h2 class="section-heading"><span class="hash">#</span>contacts</h2>
+                    <span class="section-line" aria-hidden="true"></span>
+                </div>
+                <p class="contact-lead">I'm interested in freelance opportunities and collaborations. If you have another request or question, don't hesitate to contact me.</p>
+            </div>
+            <div class="contact-card">
+                <h3 class="contact-card-title">Message me here</h3>
+                <ul class="contact-list">
+                    <li>
+                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer">+91 97035 89296</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <a href="mailto:Rupapydi970@gmail.com">Rupapydi970@gmail.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-inner">
+            <div class="footer-row">
+                <a href="#home" class="brand brand--footer">
+                    <span class="brand-mark" aria-hidden="true"></span>
+                    <span class="brand-name">Rupa</span>
+                </a>
+                <div class="footer-media">
+                    <span class="footer-media-label">Media</span>
+                    <div class="footer-icons">
+                        <a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <p class="footer-copy">© Copyright 2026. Made by Rupa Bhaskar Pydi</p>
         </div>
     </footer>
 
     <script src="Port.js"></script>
 </body>
 </html>
-
-
