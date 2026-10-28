@@ -1,28 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <script>
         (function () {
+            var d = document.documentElement;
+            d.classList.add("js");
             try {
-                var k = "theme";
-                var d = document.documentElement;
-                var s = localStorage.getItem(k);
-                if (s === "light" || s === "dark") {
-                    d.setAttribute("data-theme", s);
-                    return;
-                }
-                d.setAttribute("data-theme", "dark");
-            } catch (e) {}
+                var s = localStorage.getItem("theme");
+                d.setAttribute("data-theme", s === "light" || s === "dark" ? s : "light");
+            } catch (e) {
+                d.setAttribute("data-theme", "light");
+            }
         })();
     </script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Rupa Bhaskar Pydi — Portfolio</title>
+    <title>Rupa Bhaskar Pydi — Full-Stack Software Engineer</title>
+    <meta name="description" content="Full-stack software engineer building scalable web applications, reliable APIs and payment-integrated platforms with React.js, Next.js, Node.js, NestJS, Java, and SQL/NoSQL databases.">
+    <meta name="author" content="Rupa Bhaskar Pydi">
+    <meta name="theme-color" content="#f7f6fa">
+    <link rel="canonical" href="https://rupabhaskar.netlify.app/">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%2307070a'/%3E%3Ccircle cx='16' cy='16' r='7' fill='%23c084fc'/%3E%3C/svg%3E">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Rupa Bhaskar Pydi">
+    <meta property="og:url" content="https://rupabhaskar.netlify.app/">
+    <meta property="og:title" content="Rupa Bhaskar Pydi — Full-Stack Software Engineer">
+    <meta property="og:description" content="Building scalable web applications, reliable APIs, and practical software solutions with React.js, Next.js, Node.js, NestJS, and Java.">
+    <meta property="og:image" content="https://rupabhaskar.netlify.app/r.png">
+    <meta property="og:image:alt" content="Portrait of Rupa Bhaskar Pydi">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Rupa Bhaskar Pydi — Full-Stack Software Engineer">
+    <meta name="twitter:description" content="Building scalable web applications, reliable APIs, and practical software solutions.">
+    <meta name="twitter:image" content="https://rupabhaskar.netlify.app/r.png">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Rupa Bhaskar Pydi",
+        "jobTitle": "Software Engineer",
+        "url": "https://rupabhaskar.netlify.app/",
+        "image": "https://rupabhaskar.netlify.app/r.png",
+        "worksFor": { "@type": "Organization", "name": "VAWE Global Technologies" },
+        "alumniOf": { "@type": "CollegeOrUniversity", "name": "Aditya Engineering College" },
+        "address": { "@type": "PostalAddress", "addressRegion": "Andhra Pradesh", "addressCountry": "IN" },
+        "knowsAbout": ["React.js", "Next.js", "Node.js", "NestJS", "Java", "Spring Boot", "AWS EC2", "MySQL", "MongoDB", "REST APIs", "Microservices", "System design"],
+        "sameAs": [
+            "https://github.com/Rupabhaskar",
+            "https://www.linkedin.com/in/rupabhaskar-pydi-5rb/"
+        ]
+    }
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"></noscript>
+    <link rel="preload" as="image" href="r-720.webp" type="image/webp">
     <link rel="stylesheet" href="port.css">
 </head>
 <body>
@@ -32,357 +68,715 @@
         <i class="fas fa-arrow-up" aria-hidden="true"></i>
     </button>
 
-    <div class="page-decoration" aria-hidden="true">
-        <span class="mesh-gradient"></span>
-        <span class="noise-layer"></span>
-        <span class="glow-orb glow-orb--a"></span>
-        <span class="glow-orb glow-orb--b"></span>
-        <span class="glow-orb glow-orb--c"></span>
-        <span class="grid-lines"></span>
-    </div>
+    <div class="page-decoration" aria-hidden="true"></div>
 
     <aside class="side-social" aria-label="Social links">
-        <a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile (opens in a new tab)"><i class="fab fa-github" aria-hidden="true"></i></a>
+        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile (opens in a new tab)"><i class="fab fa-linkedin-in" aria-hidden="true"></i></a>
+        <a href="mailto:Rupapydi970@gmail.com" aria-label="Send an email"><i class="fas fa-envelope" aria-hidden="true"></i></a>
     </aside>
 
-    <nav class="top-nav" aria-label="Primary">
-        <div class="top-nav__inner">
-            <a href="#home" class="brand">
+    <header class="top-nav">
+        <nav class="top-nav__inner" aria-label="Primary">
+            <a href="#home" class="brand" aria-label="Rupa Bhaskar Pydi — back to top">
                 <span class="brand-mark" aria-hidden="true"></span>
                 <span class="brand-name">Rupa</span>
             </a>
             <ul class="nav-links" id="site-nav">
-                <li><a href="#home" data-nav="home"><span class="hash">#</span>home</a></li>
-                <li><a href="#projects" data-nav="projects"><span class="hash">#</span>projects</a></li>
-                <li><a href="#skills" data-nav="skills"><span class="hash">#</span>skills</a></li>
-                <li><a href="#about-me" data-nav="about-me"><span class="hash">#</span>about-me</a></li>
-                <li><a href="#contact-me" data-nav="contact-me"><span class="hash">#</span>contact-me</a></li>
+                <li><a href="#projects" data-nav="projects"><span class="hash" aria-hidden="true">#</span>projects</a></li>
+                <li><a href="#case-study" data-nav="case-study"><span class="hash" aria-hidden="true">#</span>case-study</a></li>
+                <li><a href="#experience" data-nav="experience"><span class="hash" aria-hidden="true">#</span>experience</a></li>
+                <li><a href="#skills" data-nav="skills"><span class="hash" aria-hidden="true">#</span>skills</a></li>
+                <li><a href="#about-me" data-nav="about-me"><span class="hash" aria-hidden="true">#</span>about</a></li>
+                <li><a href="#contact-me" data-nav="contact-me"><span class="hash" aria-hidden="true">#</span>contact</a></li>
             </ul>
             <div class="top-nav__actions">
-                <button type="button" class="theme-toggle" data-theme-toggle aria-label="Switch theme">
+                <a href="RupaBhaskarExp.pdf" class="btn btn--ghost btn--sm nav-resume" download="Rupa-Bhaskar-Pydi-Resume.pdf">
+                    <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume
+                </a>
+                <button type="button" class="icon-btn theme-toggle" data-theme-toggle aria-label="Switch theme">
                     <i class="fas fa-sun theme-toggle__icon theme-toggle__icon--sun" aria-hidden="true"></i>
                     <i class="fas fa-moon theme-toggle__icon theme-toggle__icon--moon" aria-hidden="true"></i>
                 </button>
-                <button type="button" class="nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
+                <button type="button" class="icon-btn nav-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-nav">
                     <span></span><span></span><span></span>
                 </button>
             </div>
-        </div>
-    </nav>
-
-    <main id="main-content">
-    <header id="home" class="hero">
-        <div class="hero-inner container">
-            <div class="hero-copy">
-                <span class="hero-tag" aria-hidden="true">&lt;portfolio /&gt;</span>
-                <h1 class="hero-title">
-                    Hi, I'm a <span class="accent">web developer</span> and <span class="accent">Java developer</span>
-                </h1>
-                <p class="hero-sub">I build scalable, secure applications with advanced technologies — from DSA and algorithms to the frontend, plus backends I create and maintain: APIs, services, databases, and dependable server-side systems for the modern web.</p>
-                <ul class="hero-stats" aria-label="Highlights">
-                    <li><span class="hero-stats__num">10+</span> <span class="hero-stats__lbl">projects shipped</span></li>
-                    <li><span class="hero-stats__num">Full</span> <span class="hero-stats__lbl">stack focus</span></li>
-                    <li><span class="hero-stats__num">Open</span> <span class="hero-stats__lbl">to collaboration</span></li>
-                </ul>
-                <a href="#projects" class="btn-outline btn-outline--primary">View work <span aria-hidden="true">↓</span></a>
-            </div>
-            <div class="hero-visual">
-                <div class="hero-deco" aria-hidden="true"></div>
-                <div class="hero-photo-wrap">
-                    <img src="r.png" alt="Rupa Bhaskar Pydi" class="hero-photo" width="640" height="853" loading="eager" decoding="async" fetchpriority="high" sizes="(max-width: 900px) 85vw, min(380px, 28vw)" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';">
-                    <div class="hero-photo-fallback" role="img" aria-label="Rupa Bhaskar Pydi">
-                        <span>RB</span>
-                    </div>
-                </div>
-                <div class="status-box">
-                    <span class="status-dot" aria-hidden="true"></span>
-                    <p>Currently working on <strong>Software Engineer &amp; System Designer</strong></p>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <section class="quote-section container reveal-on-scroll">
-        <blockquote class="quote-card">
-            <span class="quote-mark quote-open" aria-hidden="true">“</span>
-            <p class="quote-text">An idea becomes powerful when it turns into something people can use with ease.</p>
-            <span class="quote-mark quote-close" aria-hidden="true">”</span>
-            <footer class="quote-attrib">— Rupabhaskar</footer>
-        </blockquote>
+    <main id="main-content">
+
+    <!-- Hero -->
+    <section id="home" class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+            <div class="hero-copy">
+                <p class="eyebrow hero-eyebrow">
+                    <span class="status-dot" aria-hidden="true"></span>
+                    Rupa Bhaskar Pydi · Software Engineer at VAWE Global Technologies
+                </p>
+                <h1 id="hero-title" class="hero-title">Full-Stack <span class="accent">Software Engineer</span></h1>
+                <p class="hero-sub">Building scalable web applications, reliable APIs, and practical software solutions.</p>
+
+                <div class="hero-stack">
+                    <p class="hero-stack__label">Core stack</p>
+                    <ul class="tag-list" aria-label="Core stack">
+                        <li class="tag">React.js</li>
+                        <li class="tag">Next.js</li>
+                        <li class="tag">Node.js</li>
+                        <li class="tag">NestJS</li>
+                        <li class="tag">Java</li>
+                        <li class="tag">SQL &amp; NoSQL databases</li>
+                        <li class="tag">REST APIs &amp; microservices</li>
+                        <li class="tag">System design</li>
+                    </ul>
+                </div>
+
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn--primary">View My Projects <i class="fas fa-arrow-down" aria-hidden="true"></i></a>
+                    <a href="RupaBhaskarExp.pdf" class="btn btn--ghost" download="Rupa-Bhaskar-Pydi-Resume.pdf">
+                        <i class="fas fa-file-arrow-down" aria-hidden="true"></i> Download Resume <span class="visually-hidden">(PDF)</span>
+                    </a>
+                    <a href="#contact-me" class="btn btn--ghost">Contact Me</a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="hero-photo-wrap">
+                    <picture>
+                        <source srcset="r-720.webp" type="image/webp">
+                        <img src="r.png" alt="Rupa Bhaskar Pydi" class="hero-photo" width="720" height="720" decoding="async" fetchpriority="high">
+                    </picture>
+                </div>
+                <ul class="hero-facts" aria-label="Highlights">
+                    <li><i class="fas fa-briefcase" aria-hidden="true"></i><span><strong>Software Engineer</strong> · VAWE Global Technologies</span></li>
+                    <li><i class="fas fa-globe" aria-hidden="true"></i><span><strong>Remote internship</strong> · UK-based Snap U Media</span></li>
+                    <li><i class="fas fa-certificate" aria-hidden="true"></i><span><strong>Oracle Certified</strong> Java Programmer</span></li>
+                </ul>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" class="section-block reveal-on-scroll">
+    <!-- Projects -->
+    <section id="projects" class="section reveal-on-scroll" aria-labelledby="projects-title">
         <div class="container">
             <div class="section-head">
-                <h2 class="section-heading"><span class="hash">#</span>projects</h2>
+                <h2 id="projects-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>projects</h2>
                 <span class="section-line" aria-hidden="true"></span>
-                <a href="#projects-more" class="section-link">View all ~~&gt;</a>
             </div>
-            <div class="projects-row">
+            <p class="section-intro">Production platforms and client websites I've built — from a payment-integrated learning platform to marketing and e-commerce sites.</p>
+
+            <!-- Featured: SkillWins -->
+            <article class="featured-project" aria-labelledby="featured-title">
+                <div class="featured-project__body">
+                    <p class="eyebrow"><span class="badge">Featured case study</span> Ed-tech SaaS · Web &amp; Android · Nov 2025 – Present</p>
+                    <h3 id="featured-title" class="featured-project__title">SkillWins LMS</h3>
+                    <p class="featured-project__desc">An educational learning management platform designed to support student learning, training management, examinations, analytics, and secure payments — available on the web and as an Android app on Google Play.</p>
+                    <ul class="check-list">
+                        <li>NestJS backend APIs that I develop, deployed on AWS EC2</li>
+                        <li>Role-based authentication and access control</li>
+                        <li>Student learning management and CRT (Campus Recruitment Training) management</li>
+                        <li>Examination and analytics functionality</li>
+                        <li>Razorpay payments with server-side verification and webhook handling</li>
+                    </ul>
+                    <ul class="tag-list" aria-label="Technologies used in SkillWins LMS">
+                        <li class="tag">Next.js</li>
+                        <li class="tag">React.js</li>
+                        <li class="tag">Tailwind CSS</li>
+                        <li class="tag">NestJS</li>
+                        <li class="tag">AWS EC2</li>
+                        <li class="tag">Firebase Auth</li>
+                        <li class="tag">Cloud Firestore</li>
+                        <li class="tag">Razorpay</li>
+                        <li class="tag">WhatsApp Business API</li>
+                        <li class="tag">Cloudinary</li>
+                    </ul>
+                    <div class="card-links">
+                        <a href="#case-study" class="btn btn--primary btn--sm">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                        <a href="https://www.skillwins.in/" class="btn btn--ghost btn--sm" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> (opens in a new tab)</span></a>
+                    </div>
+                </div>
+                <div class="featured-project__visual" aria-hidden="true">
+                    <div class="mini-arch">
+                        <span class="mini-arch__node mini-arch__node--wide">Next.js + React client</span>
+                        <span class="mini-arch__link"></span>
+                        <span class="mini-arch__node mini-arch__node--wide mini-arch__node--accent">NestJS API on AWS EC2</span>
+                        <span class="mini-arch__link"></span>
+                        <div class="mini-arch__row">
+                            <span class="mini-arch__node">Firebase Auth</span>
+                            <span class="mini-arch__node">Firestore</span>
+                            <span class="mini-arch__node">Razorpay</span>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <h3 class="sub-heading">Production websites</h3>
+            <div class="project-grid">
                 <article class="project-card">
-                    <div class="project-thumb">
-                        <img style="width: 100%; height: 50%; margin-top: 50px;" src="vyasa.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    <div class="project-card__media project-card__media--brand-dark">
+                        <picture>
+                            <source srcset="vaweIn-800.webp" type="image/webp">
+                            <img src="vaweIn.png" alt="VAWE Institute logo" width="800" height="241" loading="lazy" decoding="async">
+                        </picture>
                     </div>
-                    <p class="project-tech">React.js next.js tailwindcss firebase Mysql</p>
-                    <h3 class="project-title">Vyasa CA Academy</h3>
-                    <p class="project-desc">Full-stack website development experience for Vyasa Academy with a modern UI focused on lead generation, showcasing programs, and highlighting productivity-driven results.</p>
-                    <a href="https://www.vyasastudies.in/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card project-card--compact">
-                    <div class="project-thumb project-thumb--sm">
-                        <img style="width: 100%; height: 50%; margin-top: 50px;" src="vaweIn.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    <div class="project-card__body">
+                        <p class="project-card__meta">Education &amp; training · Aug – Sep 2025</p>
+                        <h4 class="project-card__title">VAWE Institute</h4>
+                        <p class="project-card__desc">Website for a software training institute — courses, certifications, workshops, and placement-focused programs.</p>
+                        <ul class="feature-list">
+                            <li>Course and training-program pages with student-focused UX</li>
+                            <li>Server-side rendering for performance and SEO</li>
+                            <li>LMS-related features and dynamic content management</li>
+                        </ul>
+                        <p class="project-card__role"><span>My role</span>Built the web application end to end at VAWE Global Technologies.</p>
+                        <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                            <li class="tag">Next.js</li><li class="tag">React.js</li><li class="tag">Tailwind CSS</li><li class="tag">Firebase</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://www.vaweinstitute.com/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of VAWE Institute (opens in a new tab)</span></a>
+                        </div>
                     </div>
-                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
-                    <h3 class="project-title">VAWE Institute</h3>
-                    <p class="project-desc">Training institute website — courses, certifications, workshops, and placement-focused content for learners in Vijayawada.</p>
-                    <a href="https://www.vaweinstitute.com/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
                 </article>
+
                 <article class="project-card">
-                    <div class="project-thumb">
-                        <img src="vawetech.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    <div class="project-card__media project-card__media--brand-grey">
+                        <picture>
+                            <source srcset="vyasa-620.webp" type="image/webp">
+                            <img src="vyasa.png" alt="Vyasa Institute for Professional Courses logo" width="620" height="211" loading="lazy" decoding="async">
+                        </picture>
                     </div>
-                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
-                    <h3 class="project-title">VAWE Global Tech</h3>
-                    <p class="project-desc">Corporate site for VAWE Technologies — software development, digital solutions, services, and product showcases for clients in Vijayawada and beyond.</p>
-                    <a href="https://www.vawetechnologies.com/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                    <div class="project-card__body">
+                        <p class="project-card__meta">Educational platform · Feb – Mar 2026</p>
+                        <h4 class="project-card__title">Vyasa Studies</h4>
+                        <p class="project-card__desc">Educational web platform for a professional-courses institute, focused on showcasing programs and generating enquiries.</p>
+                        <ul class="feature-list">
+                            <li>Reusable, responsive UI components</li>
+                            <li>Cross-browser support: Chrome, Firefox, Edge, Safari, Opera</li>
+                            <li>Performance and SEO optimisation</li>
+                        </ul>
+                        <p class="project-card__role"><span>My role</span>Developed the platform across desktop, tablet, and mobile.</p>
+                        <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                            <li class="tag">Next.js</li><li class="tag">Tailwind CSS</li><li class="tag">Firebase</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://www.vyasastudies.in/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of Vyasa Studies (opens in a new tab)</span></a>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="project-card">
-                    <div class="project-thumb">
-                        <img src="lms.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    <div class="project-card__media project-card__media--brand-light">
+                        <picture>
+                            <source srcset="vawetech-800.webp" type="image/webp">
+                            <img src="vawetech.png" alt="VAWE Global Technologies logo" width="800" height="450" loading="lazy" decoding="async">
+                        </picture>
                     </div>
-                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
-                    <h3 class="project-title">SkillWins LMS</h3>
-                    <p class="project-desc">Learning management platform for the VAWE ecosystem — courses, progress tracking, and learner dashboards.
-                    </br>Sample Login:</br> Username: test@gmail.com</br> Password: Test@9988
-                    </p>
-                    <a href="https://www.skillwins.in/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
+                    <div class="project-card__body">
+                        <p class="project-card__meta">Corporate website · Oct – Nov 2025</p>
+                        <h4 class="project-card__title">VAWE Global Technologies</h4>
+                        <p class="project-card__desc">Corporate site for a software company — services, web applications, cloud solutions, and digital-services pages.</p>
+                        <ul class="feature-list">
+                            <li>Mobile-first, reusable component architecture</li>
+                            <li>Service pages built for lead generation</li>
+                            <li>Performance, UI/UX, and SEO optimisation</li>
+                        </ul>
+                        <p class="project-card__role"><span>My role</span>Designed and developed the website.</p>
+                        <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                            <li class="tag">Next.js</li><li class="tag">React.js</li><li class="tag">Tailwind CSS</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://www.vawetechnologies.com/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of VAWE Global Technologies (opens in a new tab)</span></a>
+                        </div>
+                    </div>
                 </article>
+
                 <article class="project-card">
-                    <div class="project-thumb">
-                        <img style="background-color: aliceblue;" src="shopx.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
+                    <div class="project-card__media project-card__media--text" aria-hidden="true">
+                        <span>Mounis Maguva</span>
                     </div>
-                    <p class="project-tech">React.js next.js tailwindcss firebase</p>
-                    <h3 class="project-title">E-Commerce Application</h3>
-                    <p class="project-desc">Full-stack e-commerce experience with modern UI and reliable checkout flows.</p>
-                    <a href="https://ecomarc.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card">
-                    <div class="project-thumb">
-                        <img src="arura.png" alt="Aurelia Jewelry — storefront preview" loading="lazy" onerror="this.style.display='none'; this.parentElement.classList.add('thumb-fallback');">
+                    <div class="project-card__body">
+                        <p class="project-card__meta">E-commerce · Mar – May 2026</p>
+                        <h4 class="project-card__title">Mounis Maguva</h4>
+                        <p class="project-card__desc">Responsive e-commerce web application with a product catalogue and shopping workflows.</p>
+                        <ul class="feature-list">
+                            <li>Product catalogue management with dynamic data</li>
+                            <li>Image hosting and delivery through Cloudinary</li>
+                            <li>Responsive layouts tuned for fast loading</li>
+                        </ul>
+                        <p class="project-card__role"><span>My role</span>Developed the application.</p>
+                        <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                            <li class="tag">Next.js</li><li class="tag">React.js</li><li class="tag">Tailwind CSS</li><li class="tag">Firestore</li><li class="tag">Cloudinary</li>
+                        </ul>
+                        <div class="card-links">
+                            <a href="https://mounismaguva.com/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of Mounis Maguva (opens in a new tab)</span></a>
+                        </div>
                     </div>
-                    <p class="project-tech">React.js Next.js Tailwind CSS</p>
-                    <h3 class="project-title">Aurelia Jewelry</h3>
-                    <p class="project-desc">Jewelry e-commerce showcase — categories (necklaces, rings, bangles, earrings), pastel-forward UI, and shop flows built for a refined retail experience.</p>
-                    <a href="https://sample-jewelry.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card">
-                    <div class="project-thumb">
-                        <img style="width: 100%; height: 100%; margin-top: 50px;" src="logo2.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
-                    </div>
-                    <p class="project-tech">HTML CSS JS React.js next.js tailwindcss firebase</p>
-                    <h3 class="project-title">HalfSaree Photography</h3>
-                    <p class="project-desc">A commercial web application for showcasing photography work.</p>
-                    <a href="https://half-saree-photography.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card">
-                    <div class="project-thumb">
-                        <img src="logo1.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
-                    </div>
-                    <p class="project-tech">HTML CSS JS Bootstrap</p>
-                    <h3 class="project-title">MedicoPlus</h3>
-                    <p class="project-desc">Healthcare-focused web app — alpha version in active development.</p>
-                    <a href="https://rsmedicoplus.netlify.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
                 </article>
             </div>
 
-            <div id="projects-more" class="projects-more">
-                <article class="project-card project-card--compact">
-                    <div class="project-thumb project-thumb--sm">
-                        <img src="bday.png" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
-                    </div>
-                    <p class="project-tech">React.js Next.js Tailwind CSS Firebase</p>
-                    <h3 class="project-title">SnapU Birthday Photography</h3>
-                    <p class="project-desc">Marketing site for SnapU Photography — birthday sessions, packages, and gallery with a bright, celebration-focused UI.</p>
-                    <a href="https://birthday-photography.vercel.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card project-card--compact">
-                    <div class="project-thumb project-thumb--sm">
-                        <img src="Market.jpg" alt="" loading="lazy" onerror="this.parentElement.classList.add('thumb-fallback')">
-                    </div>
-                    <p class="project-tech">HTML CSS JS</p>
-                    <h3 class="project-title">Fresh Market</h3>
-                    <p class="project-desc">Alpha version — marketplace concept.</p>
-                    <a href="https://nanimarket.netlify.app/" class="btn-outline btn-live" target="_blank" rel="noopener noreferrer">Live <span aria-hidden="true">↔</span></a>
-                </article>
-                <article class="project-card project-card--compact">
-                    <div class="project-thumb project-thumb--sm thumb-fallback" aria-hidden="true"></div>
-                    <p class="project-tech">Java Spring Full-stack</p>
-                    <h3 class="project-title">BookBuddies</h3>
-                    <p class="project-desc">Committed to build — coming soon.</p>
-                    <span class="btn-outline btn-live btn-live--disabled" aria-disabled="true">Soon</span>
-                </article>
-            </div>
+            <h3 class="sub-heading">More builds</h3>
+            <ul class="compact-grid">
+                <li class="compact-card">
+                    <h4 class="compact-card__title">E-Commerce Application</h4>
+                    <p class="compact-card__desc">Full-stack e-commerce experience with product browsing and checkout flows.</p>
+                    <p class="compact-card__tech">Next.js · React.js · Tailwind CSS · Firebase</p>
+                    <a href="https://ecomarc.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of E-Commerce Application (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">Aurelia Jewelry</h4>
+                    <p class="compact-card__desc">Jewelry storefront with category browsing (necklaces, rings, bangles, earrings) and shop flows.</p>
+                    <p class="compact-card__tech">Next.js · React.js · Tailwind CSS</p>
+                    <a href="https://sample-jewelry.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of Aurelia Jewelry (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">HalfSaree Photography</h4>
+                    <p class="compact-card__desc">Commercial web application for showcasing photography work.</p>
+                    <p class="compact-card__tech">Next.js · React.js · Tailwind CSS · Firebase</p>
+                    <a href="https://half-saree-photography.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of HalfSaree Photography (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">SnapU Birthday Photography</h4>
+                    <p class="compact-card__desc">Marketing site for birthday photo sessions — packages and gallery.</p>
+                    <p class="compact-card__tech">Next.js · React.js · Tailwind CSS · Firebase</p>
+                    <a href="https://birthday-photography.vercel.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of SnapU Birthday Photography (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">Face Recognition Attendance System</h4>
+                    <p class="compact-card__desc">Academic project: real-time attendance using facial recognition, with a MySQL schema for attendance records and an admin dashboard for reporting and overrides.</p>
+                    <p class="compact-card__tech">Python · Flask · OpenCV · DeepFace · MySQL</p>
+                    <span class="compact-card__note">Academic project · no public demo</span>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">This portfolio</h4>
+                    <p class="compact-card__desc">Dependency-free static site: semantic HTML, accessible navigation, light/dark themes, and Netlify hosting.</p>
+                    <p class="compact-card__tech">HTML · CSS · JavaScript · Netlify</p>
+                    <a href="https://github.com/Rupabhaskar/Myportfolio" class="text-link" target="_blank" rel="noopener noreferrer"><i class="fab fa-github" aria-hidden="true"></i> Source code<span class="visually-hidden"> of this portfolio on GitHub (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">MedicoPlus <span class="badge badge--muted">Alpha</span></h4>
+                    <p class="compact-card__desc">Healthcare-focused web app, in active development.</p>
+                    <p class="compact-card__tech">HTML · CSS · JavaScript · Bootstrap</p>
+                    <a href="https://rsmedicoplus.netlify.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of MedicoPlus (opens in a new tab)</span></a>
+                </li>
+                <li class="compact-card">
+                    <h4 class="compact-card__title">Fresh Market <span class="badge badge--muted">Alpha</span></h4>
+                    <p class="compact-card__desc">Marketplace concept.</p>
+                    <p class="compact-card__tech">HTML · CSS · JavaScript</p>
+                    <a href="https://nanimarket.netlify.app/" class="text-link" target="_blank" rel="noopener noreferrer">Live demo <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> of Fresh Market (opens in a new tab)</span></a>
+                </li>
+            </ul>
         </div>
     </section>
 
-    <section id="skills" class="section-block reveal-on-scroll">
+    <!-- Case study -->
+    <section id="case-study" class="section section--tinted reveal-on-scroll" aria-labelledby="case-study-title">
         <div class="container">
-            <div class="section-head section-head--nomenu">
-                <h2 class="section-heading"><span class="hash">#</span>skills</h2>
+            <div class="section-head">
+                <h2 id="case-study-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>case-study</h2>
                 <span class="section-line" aria-hidden="true"></span>
             </div>
-            <div class="skills-layout">
-                <h3 class="skills-group-title">Frontend</h3>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>html5</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>css3</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>tailwindcss</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>javascript</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>react</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>next.js</span>
-                </div>
 
-                <h3 class="skills-group-title">Backend</h3>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>node.js</span>
+            <div class="case-hero">
+                <div>
+                    <p class="eyebrow">SkillWins LMS · SaaS ed-tech platform built at VAWE Global Technologies</p>
+                    <h3 class="case-hero__title">A learning platform with role-based access, exams, and secure payments</h3>
                 </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>nestjs</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>java</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>spring boot</span>
-                </div>
+                <dl class="case-meta">
+                    <div><dt>Timeline</dt><dd>Nov 2025 – Present</dd></div>
+                    <div><dt>My role</dt><dd>Backend developer (NestJS) &amp; full-stack</dd></div>
+                    <div><dt>Platforms</dt><dd>Web · Android (Google Play)</dd></div>
+                    <div><dt>Hosting</dt><dd>Backend on AWS EC2</dd></div>
+                    <div><dt>Live</dt><dd><a href="https://www.skillwins.in/" class="text-link" target="_blank" rel="noopener noreferrer">skillwins.in<span class="visually-hidden"> (opens in a new tab)</span></a></dd></div>
+                </dl>
+            </div>
 
-                <h3 class="skills-group-title">SQL · MongoDB · Firebase</h3>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>mysql</span>
-                    <span class="skill-caption">relational sql</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>mongodb</span>
-                    <span class="skill-caption">nosql database</span>
-                </div>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>firebase</span>
-                    <span class="skill-caption">authentication &amp; database</span>
-                </div>
+            <nav class="case-toc" aria-label="Case study sections">
+                <a href="#cs-overview">Overview</a>
+                <a href="#cs-features">Features</a>
+                <a href="#cs-contribution">My contribution</a>
+                <a href="#cs-data">API &amp; data</a>
+                <a href="#cs-security">Security &amp; payments</a>
+                <a href="#cs-challenges">Challenges</a>
+                <a href="#cs-links">Links</a>
+            </nav>
 
-                <h3 class="skills-group-title">Tools &amp; foundations</h3>
-                <div class="skill-box">
-                    <img class="skill-icon" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>git</span>
+            <div class="case-grid">
+                <div class="case-block" id="cs-overview">
+                    <h4 class="case-block__title"><span class="case-block__num">01</span> Overview</h4>
+                    <p>SkillWins is an educational learning management platform designed to support student learning, training management, examinations, analytics, and secure payments. It brings user onboarding, course management, and subscription billing into one product, available on the web and as an Android app on Google Play. Its backend is a NestJS application running on AWS EC2.</p>
                 </div>
-                <div class="skill-box">
-                    <img class="skill-icon skill-icon--on-light" src="https://cdn.jsdelivr.net/npm/simple-icons@v13/icons/leetcode.svg" alt="" width="48" height="48" loading="lazy" decoding="async">
-                    <span>dsa / oops</span>
+                <div class="case-block">
+                    <h4 class="case-block__title"><span class="case-block__num">02</span> The problem</h4>
+                    <p>A training organisation needs one place to deliver courses, run Campus Recruitment Training, conduct examinations, and collect course payments — while making sure each user only sees what their role permits, and every paid enrolment is backed by a verified payment.</p>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <section id="about-me" class="section-block about-section reveal-on-scroll">
-        <div class="container about-grid">
-            <div class="about-copy">
-                <div class="section-head section-head--nomenu">
-                    <h2 class="section-heading"><span class="hash">#</span>about-me</h2>
-                    <span class="section-line" aria-hidden="true"></span>
-                </div>
-                <p>I'm a developer who cares about responsive, accessible interfaces and backends that stay maintainable as they grow. I turn ideas into scalable, secure products — thoughtful front-end UX paired with APIs, data layers, and server-side logic I can own end to end.</p>
-                <p>When I'm not coding, I'm usually sharpening problem-solving and DSA, exploring new tools, or shipping the next small improvement to something I already built.</p>
-                <p>I'm especially interested in how to implement microservices well: clear domain boundaries, resilient communication between services, and choosing the right patterns and providers (containers, gateways, observability) so the architecture stays understandable and production-ready.</p>
-                <a href="RupaBhaskarExp.pdf" class="btn-outline btn-resume" download><i class="fas fa-file-arrow-down" aria-hidden="true"></i> Resume <span aria-hidden="true">↓</span></a>
+            <div class="case-block case-block--full" id="cs-features">
+                <h4 class="case-block__title"><span class="case-block__num">03</span> Main features</h4>
+                <ul class="feature-tiles">
+                    <li><i class="fas fa-user-shield" aria-hidden="true"></i><strong>Role-based access</strong><span>Authentication with role-based permissions across LMS modules.</span></li>
+                    <li><i class="fas fa-book-open" aria-hidden="true"></i><strong>Learning management</strong><span>Courses, enrolments, and student progress tracking.</span></li>
+                    <li><i class="fas fa-briefcase" aria-hidden="true"></i><strong>CRT management</strong><span>Campus Recruitment Training programs managed in the platform.</span></li>
+                    <li><i class="fas fa-chart-line" aria-hidden="true"></i><strong>Exams &amp; analytics</strong><span>Examinations with results and analytics.</span></li>
+                    <li><i class="fas fa-credit-card" aria-hidden="true"></i><strong>Razorpay payments</strong><span>Checkout, payment verification, refunds, and subscription lifecycle.</span></li>
+                    <li><i class="fab fa-whatsapp" aria-hidden="true"></i><strong>WhatsApp notifications</strong><span>Automated course alerts and transactional messages.</span></li>
+                </ul>
             </div>
-            <div class="about-art" aria-hidden="true">
-                <div class="about-art-frame">
-                    <div class="about-art-grid"></div>
-                    <div class="about-art-vignette"></div>
-                    <div class="about-art-glow about-art-glow--a"></div>
-                    <div class="about-art-glow about-art-glow--b"></div>
-                    <span class="about-art-corner about-art-corner--tl"></span>
-                    <span class="about-art-corner about-art-corner--tr"></span>
-                    <span class="about-art-corner about-art-corner--bl"></span>
-                    <span class="about-art-corner about-art-corner--br"></span>
-                    <div class="about-art-scene">
-                        <div class="about-arch">
-                            <span class="about-arch__edge" aria-hidden="true"></span>
-                            <span class="about-arch__dot"></span>
-                        </div>
-                        <div class="about-monitor">
-                            <div class="about-monitor__body">
-                                <div class="about-monitor__chrome">
-                                    <span class="about-monitor__dot about-monitor__dot--r"></span>
-                                    <span class="about-monitor__dot about-monitor__dot--y"></span>
-                                    <span class="about-monitor__dot about-monitor__dot--g"></span>
-                                </div>
-                                <div class="about-monitor__viewport">
-                                    <div class="about-monitor__lines">
-                                        <span class="about-line"></span>
-                                        <span class="about-line"></span>
-                                        <span class="about-line"></span>
-                                        <span class="about-line"></span>
-                                        <span class="about-line"></span>
-                                        <span class="about-line"></span>
-                                    </div>
-                                    <span class="about-monitor__ring"></span>
-                                </div>
-                                <div class="about-monitor__shine"></div>
-                            </div>
-                            <div class="about-monitor__base"></div>
-                            <div class="about-monitor__ground"></div>
-                        </div>
+
+            <div class="case-block case-block--full" id="cs-contribution">
+                <h4 class="case-block__title"><span class="case-block__num">04</span> My contribution &amp; engineering responsibilities</h4>
+                <ul class="check-list check-list--cols">
+                    <li>Develop the platform's backend REST APIs with NestJS.</li>
+                    <li>Deploy and run the NestJS backend on an AWS EC2 instance.</li>
+                    <li>Built the platform's end-to-end flow: user onboarding, course management, and subscription billing.</li>
+                    <li>Integrated the Razorpay payment gateway with webhook handling for payment verification, refund processing, and subscription lifecycle management.</li>
+                    <li>Implemented the Meta WhatsApp Business API for automated user notifications, course alerts, and transactional messaging.</li>
+                    <li>Designed Firestore data schemas and indexes for the platform's query patterns.</li>
+                    <li>Enforced access control with Firebase Authentication — token-based sessions and role-based permissions.</li>
+                    <li>Built the responsive Next.js and Tailwind CSS interface, with Cloudinary for media.</li>
+                </ul>
+            </div>
+            <div class="case-grid">
+                <div class="case-block" id="cs-data">
+                    <h4 class="case-block__title"><span class="case-block__num">05</span> API &amp; database design considerations</h4>
+                    <ul class="bullet-list">
+                        <li><strong>Model data around reads.</strong> Firestore is a document store, so schemas are shaped around how dashboards and course pages query data, with indexes for the frequent filtered queries.</li>
+                        <li><strong>Clear data domains.</strong> Users and roles, courses and content, enrolments and progress, exams and results, and payments are kept as separate concerns.</li>
+                        <li><strong>Server-owned writes for sensitive state.</strong> Enrolment and payment status change only after server-side verification, never directly from the client.</li>
+                        <li><strong>Predictable API behaviour.</strong> Validate input at the boundary and return consistent error responses the UI can handle.</li>
+                    </ul>
+                </div>
+                <div class="case-block" id="cs-security">
+                    <h4 class="case-block__title"><span class="case-block__num">06</span> Security &amp; payment handling</h4>
+                    <ul class="bullet-list">
+                        <li><strong>Authenticated, role-checked access.</strong> Firebase Authentication tokens identify the user; role-based permissions decide what they can reach — enforced beyond the UI.</li>
+                        <li><strong>Verify, don't trust the browser.</strong> A successful checkout in the browser is not proof of payment; payments are verified on the server before access is granted.</li>
+                        <li><strong>Webhooks as the source of truth.</strong> Razorpay webhooks drive payment confirmation, refunds, and subscription changes, so state stays correct even if a user closes the tab mid-payment.</li>
+                        <li><strong>Secrets stay server-side.</strong> Gateway keys and API credentials live in the backend's server environment and are never shipped to the web or mobile client.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="case-block case-block--full" id="cs-challenges">
+                <h4 class="case-block__title"><span class="case-block__num">07</span> Challenges &amp; solutions</h4>
+                <div class="challenge-list">
+                    <div class="challenge">
+                        <p class="challenge__q">Keeping payment and subscription state consistent</p>
+                        <p class="challenge__a">Client-side success callbacks can be missed or spoofed. Payment verification, refunds, and subscription lifecycle events are handled through Razorpay webhooks on the server.</p>
+                    </div>
+                    <div class="challenge">
+                        <p class="challenge__q">Different users need different access</p>
+                        <p class="challenge__a">Firebase Authentication with role-based permissions governs which LMS modules each user can access, rather than relying on hidden UI elements.</p>
+                    </div>
+                    <div class="challenge">
+                        <p class="challenge__q">Reaching learners at the right moment</p>
+                        <p class="challenge__a">The Meta WhatsApp Business API sends automated course alerts and transactional messages, so updates reach learners on a channel they already use.</p>
+                    </div>
+                    <div class="challenge">
+                        <p class="challenge__q">Fast queries on a document database</p>
+                        <p class="challenge__a">Firestore schemas and indexes were designed around the platform's query patterns instead of mirroring a relational model.</p>
                     </div>
                 </div>
             </div>
+
+            <div class="case-block case-block--full case-links" id="cs-links">
+                <h4 class="case-block__title"><span class="case-block__num">08</span> Links</h4>
+                <div class="case-links__row">
+                    <a href="https://www.skillwins.in/" class="btn btn--primary" target="_blank" rel="noopener noreferrer">Visit SkillWins <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i><span class="visually-hidden"> (opens in a new tab)</span></a>
+                    <p class="case-links__note"><i class="fab fa-google-play" aria-hidden="true"></i> Also available as an Android app on Google Play.</p>
+                    <p class="case-links__note"><i class="fas fa-lock" aria-hidden="true"></i> Source code is not publicly available.</p>
+                </div>
+                <details class="demo-access">
+                    <summary>Demo access for reviewers</summary>
+                    <p>Username: <code>test@gmail.com</code> · Password: <code>Test@9988</code></p>
+                </details>
+            </div>
         </div>
     </section>
 
-    <section id="contact-me" class="section-block reveal-on-scroll">
-        <div class="container contact-grid">
-            <div>
-                <div class="section-head section-head--nomenu">
-                    <h2 class="section-heading"><span class="hash">#</span>contacts</h2>
-                    <span class="section-line" aria-hidden="true"></span>
-                </div>
-                <p class="contact-lead">I'm interested in freelance opportunities and collaborations. If you have another request or question, don't hesitate to contact me.</p>
+    <!-- Experience -->
+    <section id="experience" class="section reveal-on-scroll" aria-labelledby="experience-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 id="experience-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>experience</h2>
+                <span class="section-line" aria-hidden="true"></span>
             </div>
-            <div class="contact-card">
-                <h3 class="contact-card-title">Message me here</h3>
-                <ul class="contact-list">
+
+            <ol class="timeline">
+                <li class="timeline__item">
+                    <div class="timeline__head">
+                        <div>
+                            <h3 class="timeline__role">Software Engineer</h3>
+                            <p class="timeline__org">VAWE Global Technologies <span>· Startup · Andhra Pradesh, India</span></p>
+                        </div>
+                        <p class="timeline__date"><time datetime="2025-08">Aug 2025</time> – Present</p>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Backend developer for SkillWins LMS: build its REST APIs with NestJS and deploy the backend on AWS EC2; SkillWins is live on the web and on Google Play.</li>
+                        <li>Develop RESTful backend APIs with Java and Spring Boot for a learning management system.</li>
+                        <li>Built the VAWE Institute web application end to end with Next.js and React.js, using server-side rendering for performance and SEO.</li>
+                        <li>Integrated Firebase Authentication for secure login, role-based access control, and session management across LMS modules.</li>
+                        <li>Designed Firestore schemas for course management, progress tracking, and enrolments; optimised the UI with lazy loading and responsive Tailwind CSS.</li>
+                        <li>Work in Agile sprints with code reviews, daily stand-ups, and iterative releases.</li>
+                    </ul>
+                    <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                        <li class="tag">NestJS</li><li class="tag">AWS EC2</li><li class="tag">Java</li><li class="tag">Spring Boot</li><li class="tag">Next.js</li><li class="tag">React.js</li><li class="tag">Firebase</li><li class="tag">Tailwind CSS</li>
+                    </ul>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__head">
+                        <div>
+                            <h3 class="timeline__role">Software Developer Intern</h3>
+                            <p class="timeline__org">Snap U Media (Weblizer) <span>· UK-based company · Remote</span></p>
+                        </div>
+                        <p class="timeline__date"><time datetime="2025-05">May 2025</time> – <time datetime="2025-08">Aug 2025</time></p>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Developed pixel-perfect, responsive pages with React.js, Next.js, and Tailwind CSS to international client standards.</li>
+                        <li>Integrated Firebase Firestore for real-time data synchronisation and backend data management.</li>
+                        <li>Built reusable, modular component libraries for consistent UI and cross-browser compatibility.</li>
+                    </ul>
+                    <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                        <li class="tag">React.js</li><li class="tag">Next.js</li><li class="tag">Tailwind CSS</li><li class="tag">Firestore</li>
+                    </ul>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__head">
+                        <div>
+                            <h3 class="timeline__role">Java Backend Intern</h3>
+                            <p class="timeline__org">Sava's Tech Solutions <span>· Hyderabad, India</span></p>
+                        </div>
+                        <p class="timeline__date"><time datetime="2024-11">Nov 2024</time> – <time datetime="2025-01">Jan 2025</time></p>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Developed modular Java backend modules with MySQL integration, applying OOP and SOLID principles.</li>
+                        <li>Wrote and optimised SQL queries for reporting and data retrieval.</li>
+                    </ul>
+                    <ul class="tag-list tag-list--sm" aria-label="Technologies">
+                        <li class="tag">Java</li><li class="tag">MySQL</li><li class="tag">JDBC</li><li class="tag">SQL</li>
+                    </ul>
+                </li>
+                <li class="timeline__item">
+                    <div class="timeline__head">
+                        <div>
+                            <h3 class="timeline__role">Freelance Full-Stack Developer</h3>
+                            <p class="timeline__org">Independent</p>
+                        </div>
+                    </div>
+                    <ul class="bullet-list">
+                        <li>Build responsive websites and web applications — e-commerce storefronts and business sites — with Next.js, React.js, Tailwind CSS, and Firebase. Selected work is listed under <a href="#projects" class="text-link">projects</a>.</li>
+                    </ul>
+                </li>
+            </ol>
+
+            <div class="edu-grid">
+                <div class="info-card">
+                    <h3 class="info-card__title"><i class="fas fa-graduation-cap" aria-hidden="true"></i> Education</h3>
+                    <dl class="info-list">
+                        <div>
+                            <dt>Master of Computer Applications (MCA)</dt>
+                            <dd>Aditya Engineering College · 2023 – 2025 · CGPA 8.5</dd>
+                        </div>
+                        <div>
+                            <dt>B.Sc. in Computer Science</dt>
+                            <dd>Sir C.R. Reddy College, Eluru · 2019 – 2022 · CGPA 7.5</dd>
+                        </div>
+                    </dl>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-card__title"><i class="fas fa-certificate" aria-hidden="true"></i> Certifications &amp; training</h3>
+                    <dl class="info-list">
+                        <div>
+                            <dt>Oracle Certified Java Programmer (OCJP)</dt>
+                            <dd>Oracle · Feb 2024</dd>
+                        </div>
+                        <div>
+                            <dt>Java Full Stack Developer course</dt>
+                            <dd>Inspner Academy, Hyderabad · Nov 2022 – Apr 2023</dd>
+                        </div>
+                        <div>
+                            <dt>JavaScript certification</dt>
+                            <dd>IIT Bombay, Spoken Tutorial Project · Nov 2024</dd>
+                        </div>
+                        <div>
+                            <dt>5-star Java on HackerRank</dt>
+                            <dd>Oct 2023</dd>
+                        </div>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section section--tinted reveal-on-scroll" aria-labelledby="skills-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 id="skills-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>skills</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <p class="section-intro">Technologies I use in production work and can discuss in depth.</p>
+
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-display" aria-hidden="true"></i> Frontend</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">React.js</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Next.js</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">JavaScript</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">TypeScript</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">JSX</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">HTML5</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">CSS3</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Tailwind CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-server" aria-hidden="true"></i> Backend</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Java</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Spring Boot</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Node.js</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nestjs/nestjs-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">NestJS</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Python</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flask/flask-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Flask</li>
+                        <li class="tag tag--logo"><i class="fas fa-code" aria-hidden="true"></i>REST APIs</li>
+                        <li class="tag tag--logo"><i class="fas fa-cubes" aria-hidden="true"></i>Microservices</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-database" aria-hidden="true"></i> Databases</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">MySQL</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">MongoDB</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Firebase Firestore</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">JDBC</li>
+                        <li class="tag tag--logo"><i class="fas fa-magnifying-glass-chart" aria-hidden="true"></i>SQL query optimisation</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-plug" aria-hidden="true"></i> Integrations</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><img src="https://cdn.simpleicons.org/razorpay" alt="" width="18" height="18" loading="lazy" decoding="async">Razorpay</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Firebase Authentication</li>
+                        <li class="tag tag--logo"><img src="https://cdn.simpleicons.org/whatsapp" alt="" width="18" height="18" loading="lazy" decoding="async">Meta WhatsApp Business API</li>
+                        <li class="tag tag--logo"><img src="https://cdn.simpleicons.org/cloudinary" alt="" width="18" height="18" loading="lazy" decoding="async">Cloudinary</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-diagram-project" aria-hidden="true"></i> Engineering</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><i class="fas fa-sitemap" aria-hidden="true"></i>System design</li>
+                        <li class="tag tag--logo"><i class="fas fa-plug" aria-hidden="true"></i>API integration</li>
+                        <li class="tag tag--logo"><i class="fas fa-user-lock" aria-hidden="true"></i>Authentication &amp; authorisation</li>
+                        <li class="tag tag--logo"><i class="fas fa-credit-card" aria-hidden="true"></i>Payment integration</li>
+                        <li class="tag tag--logo"><i class="fas fa-bug" aria-hidden="true"></i>Debugging</li>
+                        <li class="tag tag--logo"><i class="fas fa-gauge-high" aria-hidden="true"></i>Performance optimisation</li>
+                        <li class="tag tag--logo"><i class="fas fa-rocket" aria-hidden="true"></i>Deployment</li>
+                        <li class="tag tag--logo"><i class="fas fa-shapes" aria-hidden="true"></i>OOP &amp; design patterns</li>
+                        <li class="tag tag--logo"><i class="fas fa-code-branch" aria-hidden="true"></i>Data structures &amp; algorithms</li>
+                    </ul>
+                </div>
+                <div class="skill-group">
+                    <h3 class="skill-group__title"><i class="fas fa-screwdriver-wrench" aria-hidden="true"></i> Tools</h3>
+                    <ul class="tag-list">
+                        <li class="tag tag--logo"><i class="fab fa-aws tag-logo--aws" aria-hidden="true"></i>AWS EC2</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Git</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">GitHub</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/maven/maven-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Maven</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/junit/junit-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">JUnit</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Linux CLI</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/githubactions/githubactions-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">CI/CD pipelines</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/netlify/netlify-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Netlify</li>
+                        <li class="tag tag--logo"><img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original.svg" alt="" width="18" height="18" loading="lazy" decoding="async">Vercel</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="ai-note">
+                <h3 class="skill-group__title"><i class="fas fa-wand-magic-sparkles" aria-hidden="true"></i> AI-assisted development</h3>
+                <p>I use AI coding tools to move faster on scaffolding, exploration, and boilerplate — and I stay accountable for the result: I review every change, debug and test it myself, check it for security issues, and hold it to the same product-quality bar as hand-written code.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about-me" class="section reveal-on-scroll" aria-labelledby="about-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 id="about-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>about-me</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <div class="about-grid">
+                <div class="about-copy">
+                    <p class="about-lead">I'm a software engineer with 1+ years of professional experience across Java backend development, REST API design, and full-stack web applications.</p>
+                    <p>I work across the stack — Next.js and React.js on the frontend; Java with Spring Boot, Node.js, and NestJS on the backend; MySQL, MongoDB, and Firestore for data — and I've shipped integrations like Razorpay payments, Firebase Authentication, and the WhatsApp Business API into production.</p>
+                    <p>I care about responsive, accessible interfaces and backends that stay maintainable as they grow. I'm especially interested in building microservices well: clear domain boundaries, resilient communication between services, and patterns that keep the architecture understandable and production-ready.</p>
+                    <blockquote class="pull-quote">
+                        <p>“An idea becomes powerful when it turns into something people can use with ease.”</p>
+                    </blockquote>
+                </div>
+                <div class="practice">
+                    <h3 class="practice__title">How I build software</h3>
+                    <ul class="practice-list">
+                        <li><strong>API design</strong><span>Resource-oriented REST endpoints with input validation at the boundary and consistent error responses — Spring Boot at work, NestJS for microservices.</span></li>
+                        <li><strong>Data modelling</strong><span>Normalised relational schemas and tuned SQL in MySQL; document schemas and indexes shaped by query patterns in Firestore.</span></li>
+                        <li><strong>Auth &amp; payments</strong><span>Role-based access with Firebase Authentication; Razorpay with server-side verification and webhooks.</span></li>
+                        <li><strong>Testing &amp; debugging</strong><span>JUnit for Java units, reproduce-before-fix debugging, and code reviews in Agile sprints.</span></li>
+                        <li><strong>Delivery &amp; performance</strong><span>Git-based workflows, server-side rendering for SEO, lazy loading, and backend hosting on AWS EC2, and frontend deployments on Vercel and Netlify.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact-me" class="section section--tinted reveal-on-scroll" aria-labelledby="contact-title">
+        <div class="container">
+            <div class="section-head">
+                <h2 id="contact-title" class="section-heading"><span class="hash" aria-hidden="true">#</span>contact</h2>
+                <span class="section-line" aria-hidden="true"></span>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-copy">
+                    <h3 class="contact-title">Let's talk about your team or project.</h3>
+                    <p class="contact-lead">I'm open to conversations about full-stack, backend, and software engineering roles, as well as freelance projects and collaborations. Email is the quickest way to reach me.</p>
+                    <p class="contact-location"><i class="fas fa-location-dot" aria-hidden="true"></i> Andhra Pradesh, India · IST (UTC+5:30)</p>
+                </div>
+                <ul class="contact-actions">
                     <li>
-                        <i class="fab fa-whatsapp" aria-hidden="true"></i>
-                        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer">+91 97035 89296</a>
+                        <a href="mailto:Rupapydi970@gmail.com" class="contact-action contact-action--primary">
+                            <i class="fas fa-envelope" aria-hidden="true"></i>
+                            <span><strong>Email</strong><span>Rupapydi970@gmail.com</span></span>
+                        </a>
                     </li>
                     <li>
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <a href="mailto:Rupapydi970@gmail.com">Rupapydi970@gmail.com</a>
+                        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" class="contact-action" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                            <span><strong>LinkedIn</strong><span>rupabhaskar-pydi-5rb</span></span>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://github.com/Rupabhaskar" class="contact-action" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github" aria-hidden="true"></i>
+                            <span><strong>GitHub</strong><span>Rupabhaskar</span></span>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." class="contact-action" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+                            <span><strong>WhatsApp</strong><span>Send a message</span></span>
+                            <span class="visually-hidden">(opens in a new tab)</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="RupaBhaskarExp.pdf" class="contact-action" download="Rupa-Bhaskar-Pydi-Resume.pdf">
+                            <i class="fas fa-file-arrow-down" aria-hidden="true"></i>
+                            <span><strong>Resume</strong><span>Download PDF</span></span>
+                        </a>
                     </li>
                 </ul>
             </div>
@@ -391,25 +785,42 @@
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-inner">
-            <div class="footer-row">
-                <a href="#home" class="brand brand--footer">
-                    <span class="brand-mark" aria-hidden="true"></span>
-                    <span class="brand-name">Rupa</span>
-                </a>
-                <div class="footer-media">
-                    <span class="footer-media-label">Media</span>
-                    <div class="footer-icons">
-                        <a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
-                        <a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="https://wa.me/919703589296?text=Hi!%20Are%20you%20ready%20to%20collaborate%3F%20I%27m%20interested%20in%20collaborating." target="_blank" rel="noopener noreferrer" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
-                    </div>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="brand">
+                        <span class="brand-mark" aria-hidden="true"></span>
+                        <span class="brand-name">Rupa Bhaskar Pydi</span>
+                    </a>
+                    <p>Full-stack software engineer building scalable web applications, reliable APIs, and practical software solutions.</p>
+                </div>
+                <nav class="footer-col" aria-label="Footer">
+                    <h2 class="footer-col__title">Navigate</h2>
+                    <ul>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#case-study">SkillWins case study</a></li>
+                        <li><a href="#experience">Experience</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact-me">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="footer-col">
+                    <h2 class="footer-col__title">Connect</h2>
+                    <ul>
+                        <li><a href="mailto:Rupapydi970@gmail.com">Email</a></li>
+                        <li><a href="https://www.linkedin.com/in/rupabhaskar-pydi-5rb/" target="_blank" rel="noopener noreferrer">LinkedIn<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                        <li><a href="https://github.com/Rupabhaskar" target="_blank" rel="noopener noreferrer">GitHub<span class="visually-hidden"> (opens in a new tab)</span></a></li>
+                        <li><a href="RupaBhaskarExp.pdf" download="Rupa-Bhaskar-Pydi-Resume.pdf">Resume (PDF)</a></li>
+                    </ul>
                 </div>
             </div>
-            <p class="footer-copy">© Copyright 2026. Made by Rupa Bhaskar Pydi</p>
+            <div class="footer-bottom">
+                <p>© <span data-year>2026</span> Rupa Bhaskar Pydi. All rights reserved.</p>
+                <p>Built with HTML, CSS &amp; JavaScript · Hosted on Netlify · <a href="https://github.com/Rupabhaskar/Myportfolio" class="text-link" target="_blank" rel="noopener noreferrer">View source<span class="visually-hidden"> (opens in a new tab)</span></a></p>
+            </div>
         </div>
     </footer>
 
-    <script src="Port.js"></script>
+    <script src="Port.js" defer></script>
 </body>
 </html>
